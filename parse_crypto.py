@@ -40,9 +40,20 @@ def getHtml() -> str:
     except Exception as e:
         return "error"   
 
+def parseTokens(count=10):
+    html = getHtml()
+    if html != "error":
+        arr = parseHtml(html)
+        printArr(arr, count)
+    else:
+        print("Error")
+
 def main():
     count = input("Введите количество записей или оставьте поле пустым ->")
     if count.isdigit():
+        parseTokens(int(count))
+    else:
+        parseTokens()
         
 
 if __name__ == "__main__":
