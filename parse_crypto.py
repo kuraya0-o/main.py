@@ -1,11 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as Bs
 
-def printArr(arr: list, count: int):
-    arr.sort(key=lambda x: x[2], reverse=True)
-    print(f'{"Название":>60}{"Ссылка":^70}{"Прайс":>10}')
-    for i in range(min(len(arr), count)):
-        print(f"{arr[i][0]:>60} {arr[i][1]:^70} {arr[i][2]:>10.2f}")
+
 
 
 
